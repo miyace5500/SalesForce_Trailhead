@@ -1,9 +1,0 @@
-public class AccountTriggerHandler {
-    public static void CreateAccounts(List<Account> accts) {
-        for (Account a :accts) {
-            if (a.ShippingState.compareTo(a.BillingState) != 0) {
-                a.ShippingState = a.BillingState;
-            }
-        }
-    } 
-}
