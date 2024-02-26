@@ -1,0 +1,6 @@
+trigger AccountTrigger on Account (before insert) {
+    if(Trigger.isInsert && Trigger.isBefore) {
+        System.debug(Trigger.new); //The trigger.new is not null but the accounts in it are
+        AccountTriggerHandler.CreateAccounts(Trigger.new);
+    }
+}
